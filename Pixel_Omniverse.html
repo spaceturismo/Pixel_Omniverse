@@ -14835,7 +14835,7 @@ function render3D(){
   zoom *= 1 + camPunch*0.05 + (slowmoT > 0 ? 0.07*Math.min(1, slowmoT/20) : 0); camPunch *= 0.86;
   const plats = allPlatforms();
   const cw = canvas.clientWidth || W;
-  R3.resizeTo(Math.min(1920, cw*Math.min(window.devicePixelRatio||1, 2)), Math.min(1080, cw*(H/W)*Math.min(window.devicePixelRatio||1, 2)));
+  R3.resizeTo(Math.min(1920, cw*Math.min(window.devicePixelRatio||1, 1.5)), Math.min(1080, cw*(H/W)*Math.min(window.devicePixelRatio||1, 1.5)));
   R3.setDomain(domainK(), domainT(), domainStyle());
   R3.frame({ stage:currentStage, W, H, camX:camera.x, camY:camera.y, zoom, frame, orbit:specialMode==='orbit', meteors:specialMode==='meteor' ? meteors : [],
     shake:(shakeT>0 && screenshakeEnabled) ? shakeMag*(shakeT/16) : 0,
